@@ -1,2 +1,9 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
+# Make all files use LF inside the repository
+* text=auto
+
+# Force line endings for specific file types
+*.java text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf

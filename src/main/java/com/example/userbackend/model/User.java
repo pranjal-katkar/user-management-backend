@@ -2,7 +2,8 @@ package com.example.userbackend.model;
 
 import jakarta.persistence.*;
 
-@Entity  // Marks this class as a DB entity
+@Entity
+@Table(name = "users") 
 public class User {
 
     @Id
