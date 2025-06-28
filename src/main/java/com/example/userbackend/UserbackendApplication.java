@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @SpringBootApplication
 @ComponentScan("com.example.userbackend")
 @RestController
-@RequestMapping("/api")
+
+
 public class UserbackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UserbackendApplication.class, args);
-	}
-	
-	@GetMapping("/path")
+	}	
+	@GetMapping("/")
 	public String getMethodName() {
 		return new String("hELLO ");
 	}
