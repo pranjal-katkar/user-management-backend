@@ -101,23 +101,3 @@ cd user-management-backend
 Visit: [http://localhost:8080](http://localhost:8080)
 
 ---
-
-## 🙋‍♂️ Author
-
-Made with ❤️ by [Pranjal Katkar](https://www.linkedin.com/in/pranjal-katkar)
-3rd-year CSE @ SPPU | Full-Stack Dev | GATE 2026 Aspirant
-
----
-
-## ⭐ Show Support
-
-If you found this useful, give the repo a ⭐ and connect with me on LinkedIn!
-
-```
-
----
-
-✅ This is the **final, production-ready backend `README.md`** — you can directly paste this into your GitHub backend repo.
-
-Want me to now generate the **frontend README** or the **LinkedIn post** for this launch?
-```
