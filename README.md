@@ -28,7 +28,7 @@ It will respond with:
 
 ```
 
-HELLO
+User Management Backend is Running 🚀
 
 ```
 
