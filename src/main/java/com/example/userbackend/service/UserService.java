@@ -1,11 +1,12 @@
 package com.example.userbackend.service;
-import com.example.userbackend.exception.UserNotFoundException;
-import com.example.userbackend.model.User;
-import com.example.userbackend.repository.UserRepository;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+import com.example.userbackend.exception.UserNotFoundException;
+import com.example.userbackend.model.User;
+import com.example.userbackend.repository.UserRepository;
 
 @Service
 public class UserService {
@@ -20,15 +21,17 @@ public class UserService {
     }
 
     public User create(User user) {
+        if (repo.existsByEmail(user.getEmail())) {
+            throw new RuntimeException("Email already exists: " + user.getEmail());
+        }
+
         return repo.save(user);
     }
 
     public User update(Long id, User user) {
-    	
-    	User existing = repo.findById(id)
-    		    .orElseThrow(() -> new UserNotFoundException(id));
+        User existing = repo.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(id));
 
-       
         existing.setName(user.getName());
         existing.setEmail(user.getEmail());
         return repo.save(existing);
